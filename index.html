@@ -1,63 +1,63 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>CRUD home</title>
-    <link rel="stylesheet" href="assets/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,300&display=swap"
-        rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>Mi primer CRUD</h1>
+      <h1>Mi primer CRUD</h1>
     </header>
     <section class="mid">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, vel. Ratione doloribus natus dolores est nemo facilis nulla tenetur optio?</p>
+      <p>
+        Bienvenido! En este proyecto usted podrá realizar un registro de tareas asignándole una descripción, así también podrá editar o eliminar dicha tarea si así lo requiere. Todo esto basado en el acrónimo <b>CRUD</b> (<b>C</b>reate <b>R</b>ead <b>U</b>pdate <b>D</b>elete) el cual nos permite realizar funciones básicas para el manejo de información y su persistencia.  
+      </p>
     </section>
-    <form>
-        <h2>Agregar/Editar Elemento</h2>
-        <div class="input">
+    <form id="form">
+      <h2>Agregar/Editar Elemento</h2>
+      <div class="input">
         <div>
-        <label for="task">Tarea</label>
-        <input type="text" id="task" name="task" placeholder="Ingrese aqui su tarea">
-    </div>
-    <div>
-        <label for="descripcion">Descripción:</label>
-        <textarea cols="30" rows="4"  id="descripcion" name="descripcion" placeholder="Ingrese la descripción "></textarea>
-    </div>
-        <button type="submit">Guardar</button>
-    </div>
+          <label for="task">Tarea</label>
+          <input
+            type="text"
+            id="task"
+            name="task"
+            placeholder="Ingrese aqui su tarea"
+          />
+        </div>
+        <div>
+          <label for="descripcion">Descripción:</label>
+          <textarea
+            cols="30"
+            rows="4"
+            id="description"
+            name="descripcion"
+            placeholder="Ingrese la descripción "
+          ></textarea>
+        </div>
+        <button type="submit" id="save">Guardar</button>
+      </div>
     </form>
     <table>
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Descripción</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Elemento 1</td>
-                <td>Descripción del elemento 1</td>
-                <td>
-                    <button>Editar</button>
-                    <button>Eliminar</button>
-                </td>
-            </tr>
-            <tr>
-                <td>Elemento 2</td>
-                <td>Descripción del elemento 2</td>
-                <td>
-                    <button>Editar</button>
-                    <button>Eliminar</button>
-                </td>
-            </tr>
-        </tbody>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        <!-- Aqui va insertado el HTML de JS -->
+      </tbody>
     </table>
-    <script src="script.js"></script>
-</body >
-</html >
+    <script src="/main.js"></script>
+  </body>
+  <footer></footer>
+</html>

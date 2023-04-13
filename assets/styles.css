@@ -1,81 +1,98 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  body {
-    background-color: #f2f2f2;
-  }
-  header {
-    background-color: #76d4bd;
-    padding: 10px 10px;
-    text-align: center;
-  }
-  .mid {
-    padding: 10px 10px;
-  }
-  h2{
-      font-size: 15px;
-      text-align: center;
-  }
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 10px 10px;
-  }
-  form .input {
-  border: solid black 1px;
-    height: 60%;
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 10px 10px
-  
-  }
-  form div {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+header {
+  background-color: #76d4bd;
+  padding: 10px 10px;
+  text-align: center;
+}
+.mid {
+  padding: 10px 10px;
+}
+p{
   font-size: 12px;
-    display: flex;
-    gap: 20px;
+  font-weight: 300;
+  text-align: justify;
+}
+h2 {
+  font-size: 15px;
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 10px;
   }
-  input , textarea{
-      padding: 3px;
-      font-size: 10px;
-      resize: vertical;
-  }
-  
-  table {
-      margin-left: 10%;
+form .input {
+  border: solid black 1px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #48529944;
+  height: 60%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 10px;
+}
+form div {
+  font-size: 12px;
+  display: flex;
+  gap: 20px;
+}
+input,
+textarea {
+  padding: 3px;
+  font-size: 10px;
+  resize: none;
+}
+
+table {
+  margin-left: 10%;
   border-collapse: collapse;
-    width: 80%;
-  }
-  
-  th,
-  td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #76d4bd;
-  }
-  
-  button {
-    background-color: #4caf50;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #3e8e41;
-  }
-  
+  width: 80%;
+}
+th {
+  background-color: #76d4bd;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  word-break: break-all;
+  resize: both;
+  max-width: 10vw;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+}
+button.edit{
+  background-color: #edc30f;
+}
+button.delete{
+  background-color: #ff0206;
+}
+
+button:hover {
+  background-color: #76d4bd;
+}
+footer{
+  height: 5vh;
+}
