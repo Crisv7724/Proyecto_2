@@ -1,13 +1,15 @@
 const addButton = document.getElementById("save");
 addButton.addEventListener("click", create);
-const tareas = [];
+let tareas = [];
 
 function create(event) {
   event.preventDefault();
   const tarea = readForm();
   createRow(tarea);
+  tareas.push(tarea)
   clearForm();
   saveDataLS();
+  ;
 }
 
 function readForm() {
@@ -17,9 +19,8 @@ function readForm() {
   const tarea = {
     task: taskInput.value,
     desc: descInput.value,
+    id: Date.now(),
   };
-
-  tareas.push(tarea);
 
   return tarea;
 }
@@ -32,8 +33,8 @@ function createRow(tarea) {
             <td>${tarea.task}</td>
             <td>${tarea.desc}</td>
             <td>
-                <button class="edit">Editar</button>
-                <button class="delete">Eliminar</button>
+                <button class="edit" onclick=editTask(${tarea.id})>Editar</button>
+                <button class="delete" onclick=deleteTask(${tarea.id})>Eliminar</button>
             </td>
         </tr>
     `;
@@ -49,8 +50,19 @@ function saveDataLS() {
 }
 
 function readFromLS() {
-  const tareas = JSON.parse(localStorage.getItem("tareas"));
+  tareas = JSON.parse(localStorage.getItem("tareas"));
   tareas.forEach((el) => createRow(el));
 }
 
-readFromLS();
+
+function deleteTask(id) {
+  const index = tareas.findIndex((tarea) => tarea.id == id);
+  tareas.splice(index, 1);
+  saveDataLS();
+  tbody.innerHTML= ""
+  readFromLS();
+
+}
+readFromLS()
+
+-
