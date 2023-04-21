@@ -17,12 +17,26 @@
     </header>
     <section class="mid">
       <p>
-        Bienvenido! En este proyecto usted podrá realizar un registro de tareas asignándole una descripción, así también podrá editar o eliminar dicha tarea si así lo requiere. Todo esto basado en el acrónimo <b>CRUD</b> (<b>C</b>reate <b>R</b>ead <b>U</b>pdate <b>D</b>elete) el cual nos permite realizar funciones básicas para el manejo de información y su persistencia.  
+        Bienvenido! En este proyecto usted podrá realizar un registro de tareas
+        asignándole una descripción, así también podrá editar o eliminar dicha
+        tarea si así lo requiere. Todo esto basado en el acrónimo
+        <b>CRUD</b> (<b>C</b>reate <b>R</b>ead <b>U</b>pdate <b>D</b>elete) el
+        cual nos permite realizar funciones básicas para el manejo de
+        información y su persistencia.
       </p>
     </section>
     <form id="form">
-      <h2>Agregar/Editar Elemento</h2>
+      <h2>Agregar elemento</h2>
       <div class="input">
+        <div>
+          <label for="time">Fecha y hora</label>
+          <input 
+            type="datetime-local"
+            name="time"
+            id="time"
+            placeholder="fecha"
+          />
+        </div>
         <div>
           <label for="task">Tarea</label>
           <input
@@ -48,7 +62,8 @@
     <table>
       <thead>
         <tr>
-          <th>Nombre</th>
+          <th>Fecha-hora</th>
+          <th>Tarea</th>
           <th>Descripción</th>
           <th>Acciones</th>
         </tr>
@@ -57,6 +72,7 @@
         <!-- Aqui va insertado el HTML de JS -->
       </tbody>
     </table>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="/main.js"></script>
   </body>
   <footer></footer>
