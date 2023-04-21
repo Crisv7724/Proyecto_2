@@ -7,23 +7,31 @@
 body {
   background-color: #f2f2f2;
 }
-header {
+
+header,
+h1 {
+  height: 5%;
+  font-size: 20px;
   background-color: #76d4bd;
-  padding: 10px 10px;
+  padding: 5px 5px;
   text-align: center;
 }
+
 .mid {
   padding: 10px 10px;
 }
-p{
+
+p {
   font-size: 12px;
   font-weight: 300;
   text-align: justify;
 }
+
 h2 {
   font-size: 15px;
   text-align: center;
 }
+
 form {
   display: flex;
   flex-direction: column;
@@ -31,7 +39,8 @@ form {
   align-items: center;
   gap: 20px;
   padding: 10px 10px;
-  }
+}
+
 form .input {
   border: solid black 1px;
   border-radius: 10px;
@@ -45,13 +54,18 @@ form .input {
   gap: 20px;
   padding: 10px 10px;
 }
+
 form div {
+  width: 100%;
   font-size: 12px;
   display: flex;
+  justify-content: space-around;
   gap: 20px;
 }
+
 input,
 textarea {
+  color: #9aa0ae;
   padding: 3px;
   font-size: 10px;
   resize: none;
@@ -61,38 +75,79 @@ table {
   margin-left: 10%;
   border-collapse: collapse;
   width: 80%;
+  table-layout: fixed;
 }
+
 th {
   background-color: #76d4bd;
 }
 
-th,
-td {
+td,
+tr,
+th {
+  font-size: 12px;
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
   word-break: break-all;
-  resize: both;
-  max-width: 10vw;
+  max-width: 30vw;
+  width: 25%;
 }
 
 button {
+  font-size: 10px;
+  border-radius: 5px;
   background-color: #4caf50;
   color: white;
   padding: 8px 16px;
   border: none;
   cursor: pointer;
 }
-button.edit{
+
+td {
+  padding: 5px;
+}
+
+.buttons {
+  border: none;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  word-break: normal;
+}
+
+button.edit {
   background-color: #edc30f;
 }
-button.delete{
+
+button.delete {
   background-color: #ff0206;
 }
 
 button:hover {
   background-color: #76d4bd;
 }
-footer{
+
+footer {
   height: 5vh;
+}
+
+
+@media (max-width: 400px) {
+  p{
+    font-size: 8px;
+  }
+  button {
+    font-size: 8px;
+    width: auto;
+    height: auto;
+    padding: 5px;
+  }
+
+  td,
+  tr,
+  th {
+    font-size: 8px;
+  }
 }
