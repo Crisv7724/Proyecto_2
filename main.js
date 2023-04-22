@@ -113,7 +113,7 @@ function deleteTask(id) {
     text: "No podrás revertir los cambios",
     icon: "warning",
     showCancelButton: true,
-    confirmButtonColor: "#3085d6",
+    confirmButtonColor: "#4caf50",
     cancelButtonColor: "#d33",
     confirmButtonText: "Si, borrar!",
   }).then((result) => {
@@ -132,7 +132,7 @@ function editTask(id) {
   editMode = true;
   addButton.innerText = "Actualizar";
   addButton.style.backgroundColor = '#edc30f'
-  editionId = id ;
+  editionId = id;
   const tarea = tareas.find((tarea) => tarea.id === id);
   
   const taskInput = document.getElementById("task");
